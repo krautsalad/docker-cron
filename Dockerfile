@@ -1,7 +1,7 @@
 FROM alpine
 
 RUN apk update && \
-    apk add --no-cache busybox-suid tzdata && \
+    apk add --no-cache busybox-suid curl tzdata && \
     rm -rf /root/.cache /tmp/* /var/cache/apk/* /var/tmp/*
 
 RUN rm -rf /var/spool/cron/crontabs && \
